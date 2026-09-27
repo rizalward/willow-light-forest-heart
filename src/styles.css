@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg: #000000;
+  --color-fg: #f2f2f3;
+  --color-muted: #9b9ba1;
+  --color-faint: #6e6e76;
+  --color-surface: #2a2a2c;
+  --color-surface-2: #1c1c1e;
+  --color-chip: #111113;
+  --color-line: #2a2a2e;
+  --color-user: #3a4e72;
+  --color-user-fg: #f4f7fb;
+  --color-clay: #c4483c;
+  --color-menu: #2a2a2e;
+
+  --radius-bubble: 1.25rem;
+  --radius-tile: 0.9rem;
+  --spacing-rail: 4.75rem;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    overflow: hidden;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-user);
+    color: var(--color-user-fg);
+  }
+}
+
+@keyframes shell-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.shell-in {
+  animation: shell-in 220ms ease;
+}
+
+@keyframes line-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.line-in {
+  animation: line-in 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell-in,
+  .line-in {
+    animation: none;
+  }
+}
+
+.shell-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+.composer-pad {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.shell-grid {
+  display: grid;
+  height: 100dvh;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 48rem) {
+  .shell-grid {
+    grid-template-columns: var(--spacing-rail) minmax(0, 1fr);
+  }
+}

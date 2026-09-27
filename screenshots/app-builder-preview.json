@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ヒロ",
+      "hasCanvas": false,
+      "bodyTextLen": 2,
+      "bodyTextHash": "ca09d893b0cccb73d62e51d76f34357ef2576207a3aaea34a0ec9bde3f7ac736",
+      "bodyTextPrefix": "ヒロ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ヒロ",
+      "hasCanvas": false,
+      "bodyTextLen": 2,
+      "bodyTextHash": "ca09d893b0cccb73d62e51d76f34357ef2576207a3aaea34a0ec9bde3f7ac736",
+      "bodyTextPrefix": "ヒロ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
